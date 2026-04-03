@@ -3,76 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CNOC - Cybersécurité RDC</title>
+<title>CNOC - Cyber Défense RDC</title>
 
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0a0f1c;
+    font-family: Consolas, monospace;
+    background: black;
     color: #00ffcc;
 }
 
+/* HEADER */
 header {
-    background: #020617;
-    padding: 20px;
     text-align: center;
+    padding: 20px;
     border-bottom: 1px solid #00ffcc;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
-
+/* NAV */
 nav {
     text-align: center;
     padding: 10px;
-    background: #020617;
 }
 
 nav a {
     color: #00ffcc;
-    margin: 0 15px;
+    margin: 0 10px;
     text-decoration: none;
-    font-weight: bold;
 }
 
-nav a:hover {
-    color: #ffffff;
+/* TERMINAL */
+#terminal {
+    background: #020617;
+    padding: 20px;
+    margin: 20px;
+    height: 250px;
+    overflow-y: auto;
+    border: 1px solid #00ffcc;
 }
 
+/* SECTIONS */
 section {
     padding: 40px;
 }
 
-.hero {
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 2em;
-}
-
 .card {
-    background: #111827;
+    background: #020617;
     padding: 20px;
     margin: 20px 0;
-    border-left: 4px solid #00ffcc;
+    border-left: 3px solid #00ffcc;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #020617;
-    border-top: 1px solid #00ffcc;
+/* WHATSAPP BUTTON */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-    section {
-        padding: 20px;
-    }
+/* RESPONSIVE */
+@media(max-width:600px){
+    section{padding:20px;}
 }
 </style>
 </head>
@@ -80,64 +77,93 @@ footer {
 <body>
 
 <header>
-    <h1>CNOC</h1>
-    <p>Centre National des Opérations Cybernétiques - RDC</p>
+<h1>CNOC</h1>
+<p>Cyber Défense - République Démocratique du Congo</p>
 </header>
 
 <nav>
-    <a href="#">Accueil</a>
-    <a href="#mission">Mission</a>
-    <a href="#activites">Activités</a>
-    <a href="#contact">Contact</a>
+<a href="#">Accueil</a>
+<a href="#rdc">RDC</a>
+<a href="#equipe">Équipe</a>
+<a href="#contact">Contact</a>
 </nav>
 
-<section class="hero">
-    <h2>🔐 Sécuriser l’avenir numérique de la RDC</h2>
-    <p>Plateforme dédiée à la cybersécurité, la formation et la résilience numérique.</p>
+<!-- TERMINAL -->
+<div id="terminal"></div>
+
+<section id="rdc">
+<h2>🌍 Cybersécurité en RDC</h2>
+
+<div class="card">
+<p>
+La République Démocratique du Congo fait face à une montée des cybermenaces :
+fraudes numériques, attaques sur les infrastructures, manque de sensibilisation.
+</p>
+</div>
+
+<div class="card">
+<p>
+Le CNOC agit comme un centre stratégique pour :
+✔ surveiller les menaces  
+✔ former les experts locaux  
+✔ développer des capacités nationales  
+</p>
+</div>
+
 </section>
 
-<section id="mission">
-    <h2>🎯 Notre mission</h2>
-    <div class="card">
-        <p>
-        Le CNOC a pour objectif de renforcer la cybersécurité en République Démocratique du Congo
-        à travers la formation, la recherche, la sensibilisation et les opérations de sécurité.
-        </p>
-    </div>
-</section>
+<section id="equipe">
+<h2>👥 Équipe CNOC</h2>
 
-<section id="activites">
-    <h2>⚙️ Nos activités</h2>
+<div class="card">
+<p><strong>Fataki Muibu</strong> - Analyste cybersécurité & Investigateur Forensic</p>
+</div>
 
-    <div class="card">
-        <h3>🔎 Investigation numérique (Forensic)</h3>
-        <p>Analyse des incidents de sécurité et collecte de preuves numériques.</p>
-    </div>
-
-    <div class="card">
-        <h3>🛡️ Tests d'intrusion (Pentest)</h3>
-        <p>Évaluation de la sécurité des systèmes et réseaux.</p>
-    </div>
-
-    <div class="card">
-        <h3>🎓 Formation & Vulgarisation</h3>
-        <p>Formation des jeunes talents en cybersécurité en RDC.</p>
-    </div>
+<div class="card">
+<p>Membres : Experts en sécurité réseau, pentest, OSINT</p>
+</div>
 
 </section>
 
 <section id="contact">
-    <h2>📞 Contact</h2>
-    <div class="card">
-        <p>Email : fmuibu@gmail.com</p>
-        <p>WhatsApp : +243 826 806 151</p>
-        <p>WhatsApp : +243 841 029 246</p>
-    </div>
+<h2>📞 Contact</h2>
+
+<div class="card">
+<p>Email : fmuibu@gmail.com</p>
+<p>WhatsApp : +243826806151</p>
+</div>
+
 </section>
 
-<footer>
-    <p>© 2026 CNOC - RDC | Cybersécurité</p>
-</footer>
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/243826806151">💬</a>
+
+<script>
+// SIMULATION TERMINAL
+const terminal = document.getElementById("terminal");
+
+const lines = [
+"[✔] Initialisation CNOC...",
+"[✔] Chargement des modules de sécurité...",
+"[✔] Surveillance réseau activée...",
+"[✔] Analyse des menaces en RDC...",
+"[✔] Système opérationnel.",
+"> Bienvenue dans le système CNOC"
+];
+
+let i = 0;
+
+function typeLine() {
+    if(i < lines.length){
+        terminal.innerHTML += lines[i] + "<br>";
+        terminal.scrollTop = terminal.scrollHeight;
+        i++;
+        setTimeout(typeLine, 800);
+    }
+}
+
+typeLine();
+</script>
 
 </body>
 </html>
