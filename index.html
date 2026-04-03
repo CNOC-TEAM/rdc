@@ -1,14 +1,143 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>CNOC - Accueil</title>
-</head>
-<body>
-    <h1>Bienvenue sur CNOC</h1>
-    <p>Centre National des Opérations Cybernétiques</p>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CNOC - Cybersécurité RDC</title>
 
-    <h2>Contact</h2>
-    <p>Email : lolakakongo@gmail.com</p>
-    <p>WhatsApp : +243 826 806 151</p>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0a0f1c;
+    color: #00ffcc;
+}
+
+header {
+    background: #020617;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #00ffcc;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav {
+    text-align: center;
+    padding: 10px;
+    background: #020617;
+}
+
+nav a {
+    color: #00ffcc;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+section {
+    padding: 40px;
+}
+
+.hero {
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2em;
+}
+
+.card {
+    background: #111827;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 4px solid #00ffcc;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    border-top: 1px solid #00ffcc;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    section {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>CNOC</h1>
+    <p>Centre National des Opérations Cybernétiques - RDC</p>
+</header>
+
+<nav>
+    <a href="#">Accueil</a>
+    <a href="#mission">Mission</a>
+    <a href="#activites">Activités</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+    <h2>🔐 Sécuriser l’avenir numérique de la RDC</h2>
+    <p>Plateforme dédiée à la cybersécurité, la formation et la résilience numérique.</p>
+</section>
+
+<section id="mission">
+    <h2>🎯 Notre mission</h2>
+    <div class="card">
+        <p>
+        Le CNOC a pour objectif de renforcer la cybersécurité en République Démocratique du Congo
+        à travers la formation, la recherche, la sensibilisation et les opérations de sécurité.
+        </p>
+    </div>
+</section>
+
+<section id="activites">
+    <h2>⚙️ Nos activités</h2>
+
+    <div class="card">
+        <h3>🔎 Investigation numérique (Forensic)</h3>
+        <p>Analyse des incidents de sécurité et collecte de preuves numériques.</p>
+    </div>
+
+    <div class="card">
+        <h3>🛡️ Tests d'intrusion (Pentest)</h3>
+        <p>Évaluation de la sécurité des systèmes et réseaux.</p>
+    </div>
+
+    <div class="card">
+        <h3>🎓 Formation & Vulgarisation</h3>
+        <p>Formation des jeunes talents en cybersécurité en RDC.</p>
+    </div>
+
+</section>
+
+<section id="contact">
+    <h2>📞 Contact</h2>
+    <div class="card">
+        <p>Email : fmuibu@gmail.com</p>
+        <p>WhatsApp : +243 826 806 151</p>
+        <p>WhatsApp : +243 841 029 246</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 CNOC - RDC | Cybersécurité</p>
+</footer>
+
 </body>
 </html>
