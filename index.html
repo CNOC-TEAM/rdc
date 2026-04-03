@@ -53,6 +53,56 @@ section {
     margin: 20px 0;
     border-left: 3px solid #00ffcc;
 }
+/*STYLE DU BANNER*/
+.banner-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/*IMAGE CYBERGUERRE*/
+
+.cyber-banners {
+  width: 100%;
+}
+
+.banner {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: contrast(1.05) brightness(0.95);
+  transition: transform 0.5s ease;
+}
+
+.banner img:hover {
+  transform: scale(1.02);
+}
 
 /* WHATSAPP BUTTON */
 .whatsapp {
@@ -88,8 +138,22 @@ section {
 <a href="#contact">Contact</a>
 </nav>
 
+<section class="banner-slider">
+  <div class="slides">
+    <img src="images/banner1.png" class="slide active">
+    <img src="images/banner2.png" class="slide">
+    <img src="images/banner3.png" class="slide">
+    <img src="images/banner4.png" class="slide">
+    <img src="images/banner5.png" class="slide">
+  </div>
+</section>
+
 <!-- TERMINAL -->
 <div id="terminal"></div>
+
+<div class="banner">
+    <img src="images/forensic.png" alt="Cyberdéfense nationale RDC">
+</div>
 
 <section id="rdc">
 <h2>🌍 Cybersécurité en RDC</h2>
@@ -112,6 +176,10 @@ Le CNOC agit comme un centre stratégique pour :</br>
 
 </section>
 
+  <div class="banner">
+    <img src="images/soc-siem.png" alt="Centre SOC SIEM">
+  </div>
+
 <section class="hero">
     <div class="card">
     <h2>🔐 Sécuriser l’avenir numérique de la RDC</h2>
@@ -119,6 +187,10 @@ Le CNOC agit comme un centre stratégique pour :</br>
     <P>Sécuriser l’avenir numérique de la RDC implique de bâtir des infrastructures, des politiques et des compétences robustes pour protéger le pays contre les cybermenaces. Cela comprend le développement de systèmes résilients, la formation d’experts locaux, la mise en place de cadres légaux et l’adoption des standards internationaux. La cybersécurité proactive favorise la confiance dans les services numériques, encourage l’innovation technologique et protège les données personnelles et stratégiques. En anticipant les risques, en investissant dans la recherche et en promouvant une culture sécurisée, la RDC peut devenir un acteur numérique responsable, capable de tirer parti de la transformation digitale tout en minimisant les vulnérabilités et les attaques potentielles.</P>
     </div>
 </section>
+
+  <div class="banner">
+    <img src="images/cyberguerre.png" alt="Cyber guerre">
+  </div>
 
 <section id="mission">
     <h2>🎯 Notre mission</h2>
@@ -143,6 +215,10 @@ Le CNOC agit comme un centre stratégique pour :</br>
         <p>Évaluation de la sécurité des systèmes et réseaux.</p>
         <p>Les tests d’intrusion consistent à simuler des attaques réelles sur les systèmes d’information pour identifier leurs vulnérabilités avant que des cybercriminels ne les exploitent. Le pentest évalue les réseaux, applications, dispositifs et protocoles pour détecter les failles de sécurité. Les méthodes incluent le scan de ports, l’exploitation des vulnérabilités connues, le phishing simulé et les attaques physiques contrôlées. Chaque test produit un rapport détaillant les risques, l’impact potentiel et les recommandations correctives. Le pentest aide les organisations à renforcer leur cybersécurité, à anticiper les menaces et à se conformer aux standards et régulations nationales et internationales.</p>
     </div>
+
+<div class="banner">
+    <img src="images/sensibilisation.png" alt="Sensibilisation cybersécurité">
+</div>
 
     <div class="card">
         <h3>🎓 Formation & Vulgarisation</h3>
@@ -204,5 +280,25 @@ function typeLine() {
 typeLine();
 </script>
 
+
+<script> ///*SCRIPT JS BANNER*/
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function showSlide() {
+  slides.forEach((slide) => {
+    slide.classList.remove("active");
+  });
+
+  index++;
+  if (index >= slides.length) {
+    index = 0;
+  }
+
+  slides[index].classList.add("active");
+}
+
+setInterval(showSlide, 5000); // change toutes les 4 secondes
+</script>
 </body>
 </html>
