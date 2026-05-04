@@ -1322,43 +1322,23 @@
         }
 
  /* ===== BACKGROUND VISUAL ===== */
-        
-        .hero {
+     .hero {
     height: 100vh;
-    background: url('images/initiateur_cnoc.png') no-repeat center center;
+
+    background: 
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
+        url('initiateur_cnoc.png');
+
     background-size: cover;
-    position: relative;
-}
-
-/* Overlay sombre pour lisibilité */
-.hero .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    background: rgba(0, 0, 0, 0.6); /* effet pro SOC */
+    background-position: center;
+    background-repeat: no-repeat;
 
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    color: white;
     text-align: center;
 }
-
-/* Texte stylé */
-.hero h1 {
-    font-size: 3rem;
-    font-weight: bold;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-}
+/ * ====bk====*/
     </style>
 </head>
 <body>
