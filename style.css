@@ -1672,12 +1672,11 @@ RESPONSIVE
         }
 
 
-        .image_cnoc {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+        .image_cnoc img{
+            display: block;
+            width: 100%;
             height: 100vh;
+            object-fit: contain;
 
         }
 
